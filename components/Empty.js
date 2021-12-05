@@ -7,7 +7,6 @@ export default function Empty() {
   return (
     <View style={styles.block}>
       <Text style={styles.desc}>{emptyText}</Text>
-
     </View>
   )
 }

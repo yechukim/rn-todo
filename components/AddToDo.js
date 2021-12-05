@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Keyboard, Platform, StyleSheet, Image, TextInput, TouchableOpacity, View } from 'react-native'
 
-export default function AddToDo() {
+export default function AddToDo({ onInsert }) {
 
   const [text, setText] = useState('')
 
   const onPress = () => {
+    onInsert(text)
     setText('')
     Keyboard.dismiss()
   }
